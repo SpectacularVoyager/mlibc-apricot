@@ -9,7 +9,7 @@ __mlibc_spawn_thread:
 	*/
 	mov %rcx, %r10
 	mov $56, %al
-	syscall
+	int $0x80
 	test %eax, %eax
 	jnz 1f
 	xor %ebp, %ebp

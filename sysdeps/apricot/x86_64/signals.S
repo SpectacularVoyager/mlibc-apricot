@@ -8,7 +8,7 @@ __mlibc_signal_restore:
 .type __mlibc_signal_restore_rt, @function
 __mlibc_signal_restore_rt:
 	mov $15, %rax
-	syscall
+	int $0x80
 	ud2
 .section .note.GNU-stack,"",%progbits
 

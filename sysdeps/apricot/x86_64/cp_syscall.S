@@ -18,7 +18,7 @@ __mlibc_syscall_begin:
 	and $((1 << 0) | (1 << 2)), %r11
 	cmp $((1 << 0) | (1 << 2)), %r11
 	je cancel
-	syscall
+	int $0x80
 __mlibc_syscall_end:
 	ret
 
